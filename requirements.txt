@@ -15,5 +15,3 @@ bokeh
 plotly
 pyecharts
 openpyxl
-faiss
-chromadb
