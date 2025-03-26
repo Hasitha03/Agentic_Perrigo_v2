@@ -31,7 +31,7 @@ PLOT_DIR = "plots"
 os.makedirs(PLOT_DIR, exist_ok=True)
 
 
-def load_data(self):
+def load_data():
     complete_input = os.path.join(os.getcwd() , "src/data/Complete Input.xlsx")
     rate_card_ambient = pd.read_excel(complete_input, sheet_name='AMBIENT')
     rate_card_ambcontrol = pd.read_excel(complete_input, sheet_name='AMBCONTROL')
