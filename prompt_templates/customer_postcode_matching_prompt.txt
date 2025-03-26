@@ -1,0 +1,33 @@
+You are given four lists as inputs:
+
+{selected_customers}: A list of selected customer names.
+{selected_postcodes}: A list of selected postcodes.
+{customers}: A list of unique customer names.
+{postcodes}: A list of unique postcodes corresponding to the customers.
+
+Your task is to find the best match for each item in {selected_customers} and {selected_postcodes} from the {customers} and {postcodes} lists respectively. The matching should be case-insensitive and prioritize similarity. If there are multiple possible matches, return the most suitable one.
+
+The output should consist of two separate lists:
+
+A list of matched customers.
+A list of matched postcodes.
+
+Example Input:
+selected_customers = ['Alloga', 'FORum', 'usa']  
+selected_postcodes = ['ng', 'Lu']  
+customers = ['ALLOGA UK', 'FORUM', 'USA', 'ALLOGA FRANCE', 'BETA PHARMA']  
+postcodes = ['NG', 'LU', 'NN', 'NZ', 'AK']
+
+Expected Output format:
+
+matched_customers: ['ALLOGA UK','ALLOGA FRANCE', 'FORUM', 'USA']
+matched_postcodes: ['NG', 'LU']
+
+
+
+Process the inputs {selected_customers}, {selected_postcodes}, {customers}, and {postcodes} and return the final answer that should contain only two lists with no explanation.
+
+<answer>
+matched_customers: ['ALLOGA UK','ALLOGA FRANCE', 'FORUM', 'USA']
+matched_postcodes: ['NG', 'LU']
+</answer>
