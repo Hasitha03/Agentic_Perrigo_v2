@@ -15,5 +15,5 @@ bokeh
 plotly
 pyecharts
 openpyxl
-guardrails-ai
-fuzzywuzzy
+faiss
+chromadb
