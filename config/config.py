@@ -8,12 +8,12 @@ import os
 import logging
 import openai
 import streamlit as st
-import faiss
-import chromadb
-import json
+# import faiss
+# import chromadb
+# import json
 import numpy as np
 import pandas as pd
-from langchain_openai import OpenAIEmbeddings
+# from langchain_openai import OpenAIEmbeddings
 from langchain_core.messages import AnyMessage, SystemMessage, HumanMessage,ToolMessage, AIMessage
 
 from dotenv import load_dotenv,find_dotenv
