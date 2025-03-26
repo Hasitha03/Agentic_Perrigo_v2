@@ -31,11 +31,13 @@ PLOT_DIR = "plots"
 os.makedirs(PLOT_DIR, exist_ok=True)
 
 
-def load_data():
-    rate_card_ambient = pd.read_excel("/Users/hasitharapaka/Downloads/Modularised_Code 2/src/data/Complete Input.xlsx", sheet_name='AMBIENT')
-    rate_card_ambcontrol = pd.read_excel("/Users/hasitharapaka/Downloads/Modularised_Code 2/src/data/Complete Input.xlsx", sheet_name='AMBCONTROL')
+def load_data(self):
+    complete_input = os.path.join(os.getcwd() , "src/data/Complete Input.xlsx")
+    rate_card_ambient = pd.read_excel(complete_input, sheet_name='AMBIENT')
+    rate_card_ambcontrol = pd.read_excel(complete_input, sheet_name='AMBCONTROL')
     return {"rate_card_ambient": rate_card_ambient, "rate_card_ambcontrol": rate_card_ambcontrol}
 
+        
 def execute_plot_code(plot_code: str, df) -> list:
     """
     Executes the provided plotting code. It searches for every occurrence of plt.show() in the code and
@@ -636,7 +638,8 @@ def get_parameters_values(api_key: str, query: str) -> dict:
     if response:
         try:
             extracted_code = eval(response)
-            input = pd.read_excel("/Users/hasitharapaka/Downloads/Modularised_Code/src/data/Complete Input.xlsx")
+            complete_input = os.path.join(os.getcwd(), "src/data/Complete Input.xlsx")
+            input = pd.read_excel(complete_input)
             customers = input["NAME"].unique()
             postcodes = input["SHORT_POSTCODE"].unique()
             selected_customers = extracted_code['selected_customers']
